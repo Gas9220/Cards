@@ -9,13 +9,15 @@ import SwiftUI
 
 struct BottomToolbar: View {
     @Binding var modal: ToolbarSelection?
-
+    
     var body: some View {
         HStack {
-            Button {
-                modal = .stickerModal
-            } label: {
-                ToolbarButton()
+            ForEach(ToolbarSelection.allCases, id: \.self) { selection in
+                Button {
+                    modal = selection
+                } label: {
+                    ToolbarButton(modal: selection)
+                }
             }
         }
     }
@@ -26,12 +28,25 @@ struct BottomToolbar: View {
 }
 
 struct ToolbarButton: View {
-  var body: some View {
-    VStack {
-      Image(systemName: "heart.circle")
-        .font(.largeTitle)
-      Text("Stickers")
+    let modal: ToolbarSelection
+    
+    private let modalButton: [ToolbarSelection: (text: String, imageName: String)] = [
+        .photoModal: ("Photos", "photo"),
+        .frameModal: ("Frames", "square.on.circle"),
+        .stickerModal: ("Stickers", "heart.circle"),
+        .textModal: ("Text", "textformat")
+    ]
+    
+    var body: some View {
+        if let text = modalButton[modal]?.text,
+           let imageName = modalButton[modal]?.imageName {
+            VStack {
+                Image(systemName: imageName)
+                    .font(.largeTitle)
+                
+                Text(text)
+            }
+            .padding(.top)
+        }
     }
-    .padding(.top)
-  }
 }
