@@ -9,10 +9,10 @@ import SwiftUI
 
 struct BottomToolbar: View {
     @Binding var modal: ToolbarSelection?
-    
+
     var body: some View {
         HStack {
-            ForEach(ToolbarSelection.allCases, id: \.self) { selection in
+            ForEach(ToolbarSelection.allCases) { selection in
                 Button {
                     modal = selection
                 } label: {
@@ -29,21 +29,21 @@ struct BottomToolbar: View {
 
 struct ToolbarButton: View {
     let modal: ToolbarSelection
-    
+
     private let modalButton: [ToolbarSelection: (text: String, imageName: String)] = [
         .photoModal: ("Photos", "photo"),
         .frameModal: ("Frames", "square.on.circle"),
         .stickerModal: ("Stickers", "heart.circle"),
         .textModal: ("Text", "textformat")
     ]
-    
+
     var body: some View {
         if let text = modalButton[modal]?.text,
            let imageName = modalButton[modal]?.imageName {
             VStack {
                 Image(systemName: imageName)
                     .font(.largeTitle)
-                
+
                 Text(text)
             }
             .padding(.top)
