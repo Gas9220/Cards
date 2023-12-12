@@ -11,8 +11,7 @@ struct SingleCardView: View {
     @Environment(\.dismiss) var dismiss
 
     @State private var currentModal: ToolbarSelection?
-
-    let card: Card
+    @Binding var card: Card
 
     var content: some View {
         card.backgroundColor
@@ -27,5 +26,5 @@ struct SingleCardView: View {
 }
 
 #Preview {
-    SingleCardView(card: initialCards[0])
+    SingleCardView(card: .constant(initialCards[0]))
 }
