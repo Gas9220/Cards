@@ -90,9 +90,9 @@
 		6B35A1EA2B27510300B54698 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				6B35A1EB2B27510300B54698 /* CardsApp.swift */,
 				6B39444A2B28A3230039C01F /* Info.plist */,
 				6B39444B2B28A51C0039C01F /* Stickers */,
-				6B35A1EB2B27510300B54698 /* CardsApp.swift */,
 				6B3944372B2869740039C01F /* Extensions */,
 				6B3944342B2868710039C01F /* Config */,
 				6B39442F2B285ABA0039C01F /* Model */,
