@@ -21,6 +21,7 @@
 		6B3944362B2868830039C01F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944352B2868830039C01F /* Settings.swift */; };
 		6B3944392B2869880039C01F /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944382B2869880039C01F /* ColorExtensions.swift */; };
 		6B39443B2B286CA20039C01F /* CardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39443A2B286CA20039C01F /* CardToolbar.swift */; };
+		6B39443D2B286F4C0039C01F /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39443C2B286F4C0039C01F /* TextExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		6B3944352B2868830039C01F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6B3944382B2869880039C01F /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		6B39443A2B286CA20039C01F /* CardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardToolbar.swift; sourceTree = "<group>"; };
+		6B39443C2B286F4C0039C01F /* TextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				6B3944382B2869880039C01F /* ColorExtensions.swift */,
+				6B39443C2B286F4C0039C01F /* TextExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				6B3944362B2868830039C01F /* Settings.swift in Sources */,
 				6B35A2022B27580D00B54698 /* BottomToolbar.swift in Sources */,
 				6B35A1EC2B27510300B54698 /* CardsApp.swift in Sources */,
+				6B39443D2B286F4C0039C01F /* TextExtensions.swift in Sources */,
 				6B3944312B285ADA0039C01F /* Transform.swift in Sources */,
 				6B39442E2B285A460039C01F /* ResizableView.swift in Sources */,
 				6B3944332B285C690039C01F /* Operators.swift in Sources */,
