@@ -25,6 +25,7 @@
 		6B39443F2B28705E0039C01F /* CardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39443E2B28705E0039C01F /* CardElement.swift */; };
 		6B3944412B2870780039C01F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944402B2870780039C01F /* Card.swift */; };
 		6B3944432B2870B90039C01F /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944422B2870B90039C01F /* CardStore.swift */; };
+		6B3944452B2872D80039C01F /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944442B2872D80039C01F /* PreviewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		6B39443E2B28705E0039C01F /* CardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElement.swift; sourceTree = "<group>"; };
 		6B3944402B2870780039C01F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6B3944422B2870B90039C01F /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
+		6B3944442B2872D80039C01F /* PreviewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		6B35A1F12B27510500B54698 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				6B3944442B2872D80039C01F /* PreviewData.swift */,
 				6B35A1F22B27510500B54698 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -221,6 +224,7 @@
 			files = (
 				6B3944392B2869880039C01F /* ColorExtensions.swift in Sources */,
 				6B3944432B2870B90039C01F /* CardStore.swift in Sources */,
+				6B3944452B2872D80039C01F /* PreviewData.swift in Sources */,
 				6B39443B2B286CA20039C01F /* CardToolbar.swift in Sources */,
 				6B35A1FC2B27527C00B54698 /* CardThumbnail.swift in Sources */,
 				6B35A1FA2B27519800B54698 /* CardsListView.swift in Sources */,

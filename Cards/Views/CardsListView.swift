@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CardsListView: View {
+    @EnvironmentObject var store: CardStore
+
     @State private var isPresented = false
 
     var body: some View {
@@ -20,8 +22,8 @@ struct CardsListView: View {
     var list: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                ForEach(0..<10) { _ in
-                    CardThumbnail()
+                ForEach(store.cards) { card in
+                    CardThumbnail(card: card)
                         .onTapGesture {
                             isPresented = true
                         }
@@ -34,4 +36,5 @@ struct CardsListView: View {
 
 #Preview {
     CardsListView()
+        .environmentObject(CardStore(defaultData: true))
 }
