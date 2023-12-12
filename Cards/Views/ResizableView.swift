@@ -60,5 +60,11 @@ struct ResizableView: ViewModifier {
 #Preview {
     RoundedRectangle(cornerRadius: 30.0)
         .foregroundStyle(Color.blue)
-        .modifier(ResizableView())
+        .resizableView()
+}
+
+extension View {
+    func resizableView() -> some View {
+        modifier(ResizableView())
+    }
 }
