@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-struct ResizableView: View {
-    private let content = RoundedRectangle(cornerRadius: 30.0)
-    private let color = Color.red
-
+struct ResizableView: ViewModifier {
     @State private var transform = Transform()
     @State private var previousOffset: CGSize = .zero
     @State private var previousRotation: Angle = .zero
@@ -49,10 +46,9 @@ struct ResizableView: View {
             }
     }
 
-    var body: some View {
+    func body(content: Content) -> some View {
         content
             .frame(width: transform.size.width, height: transform.size.height)
-            .foregroundStyle(color)
             .rotationEffect(transform.rotation)
             .scaleEffect(scale)
             .offset(transform.offset)
@@ -62,5 +58,7 @@ struct ResizableView: View {
 }
 
 #Preview {
-    ResizableView()
+    RoundedRectangle(cornerRadius: 30.0)
+        .foregroundStyle(Color.blue)
+        .modifier(ResizableView())
 }
