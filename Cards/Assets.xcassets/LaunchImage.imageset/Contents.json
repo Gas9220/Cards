@@ -1,0 +1,17 @@
+{
+  "images" : [
+    {
+      "filename" : "launch-screen-light.svg",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "launch-screen-landscape-light.svg",
+      "idiom" : "universal",
+      "width-class" : "compact"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
