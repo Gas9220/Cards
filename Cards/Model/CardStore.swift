@@ -5,4 +5,8 @@
 //  Created by Gaspare Monte on 12/12/23.
 //
 
-import Foundation
+import SwiftUI
+
+class CardStore: ObservableObject {
+    @Published var cards: [Card] = []
+}
