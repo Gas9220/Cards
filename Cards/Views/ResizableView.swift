@@ -14,6 +14,7 @@ struct ResizableView: View {
     @State private var transform = Transform()
     @State private var previousOffset: CGSize = .zero
     @State private var previousRotation: Angle = .zero
+    @State private var scale: CGFloat = 1.0
 
     var dragGesture: some Gesture {
         DragGesture()
@@ -36,14 +37,27 @@ struct ResizableView: View {
             }
     }
 
+    var scaleGesture: some Gesture {
+        MagnificationGesture()
+            .onChanged { scale in
+                self.scale = scale
+            }
+            .onEnded { scale in
+                transform.size.width *= scale
+                transform.size.height *= scale
+                self.scale = 1.0
+            }
+    }
+
     var body: some View {
         content
             .frame(width: transform.size.width, height: transform.size.height)
             .foregroundStyle(color)
             .rotationEffect(transform.rotation)
+            .scaleEffect(scale)
             .offset(transform.offset)
             .gesture(dragGesture)
-            .gesture(rotationGesture)
+            .gesture(SimultaneousGesture(rotationGesture, scaleGesture))
     }
 }
 
