@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct StickerModal: View {
+    @Environment(\.dismiss) var dismiss
+
+    @Binding var stickerImage: UIImage?
+
     @State private var stickerNames: [String] = []
 
     let columns = [
@@ -21,6 +25,10 @@ struct StickerModal: View {
                     Image(uiImage: image(from: sticker))
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .onTapGesture {
+                            stickerImage = image(from: sticker)
+                            dismiss()
+                        }
                 }
             }
         }
@@ -64,5 +72,5 @@ struct StickerModal: View {
 }
 
 #Preview {
-    StickerModal()
+    StickerModal(stickerImage: .constant(UIImage()))
 }
