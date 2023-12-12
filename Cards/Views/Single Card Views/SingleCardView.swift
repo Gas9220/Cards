@@ -13,13 +13,9 @@ struct SingleCardView: View {
     @State private var currentModal: ToolbarSelection?
     @Binding var card: Card
 
-    var content: some View {
-        card.backgroundColor
-    }
-
     var body: some View {
         NavigationStack {
-            content
+            CardDetailView(card: $card)
                 .modifier(CardToolbar(currentModal: $currentModal))
         }
     }
