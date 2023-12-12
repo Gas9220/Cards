@@ -72,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				6B35A1EB2B27510300B54698 /* CardsApp.swift */,
-				6B3944322B285C690039C01F /* Operators.swift */,
-				6B39443A2B286CA20039C01F /* CardToolbar.swift */,
 				6B3944372B2869740039C01F /* Extensions */,
 				6B3944342B2868710039C01F /* Config */,
 				6B39442F2B285ABA0039C01F /* Model */,
@@ -106,6 +104,7 @@
 		6B35A2042B275C7000B54698 /* Single Card Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B39443A2B286CA20039C01F /* CardToolbar.swift */,
 				6B35A1FD2B27529D00B54698 /* SingleCardView.swift */,
 				6B35A1FF2B2757F000B54698 /* ToolbarSelection.swift */,
 				6B35A2012B27580D00B54698 /* BottomToolbar.swift */,
@@ -116,6 +115,7 @@
 		6B39442F2B285ABA0039C01F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B3944322B285C690039C01F /* Operators.swift */,
 				6B3944302B285ADA0039C01F /* Transform.swift */,
 			);
 			path = Model;
