@@ -17,7 +17,7 @@ struct CardDetailView: View {
 
             ForEach($card.elements, id: \.id) { $element in
                 CardElementView(element: element)
-                    .resizableView()
+                    .resizableView(transform: $element.transform)
                     .frame(width: element.transform.size.width, height: element.transform.size.height)
             }
         }
