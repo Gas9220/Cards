@@ -10,12 +10,12 @@ import SwiftUI
 struct CardsListView: View {
     @EnvironmentObject var store: CardStore
 
-    @State private var isPresented = false
+    @State private var selectedCard: Card?
 
     var body: some View {
         list
-            .fullScreenCover(isPresented: $isPresented) {
-                SingleCardView()
+            .fullScreenCover(item: $selectedCard) { card in
+                SingleCardView(card: card)
             }
     }
 
@@ -25,7 +25,7 @@ struct CardsListView: View {
                 ForEach(store.cards) { card in
                     CardThumbnail(card: card)
                         .onTapGesture {
-                            isPresented = true
+                            selectedCard = card
                         }
                 }
             }
