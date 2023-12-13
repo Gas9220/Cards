@@ -21,6 +21,18 @@ struct CardDetailView: View {
                     .frame(width: element.transform.size.width, height: element.transform.size.height)
             }
         }
+        .dropDestination(for: Data.self) { receivedData, location in
+            print(location)
+
+            for data in receivedData {
+                if let image = UIImage(data: data) {
+                    card.addElement(uiImage: image)
+                }
+            }
+
+            return !receivedData.isEmpty
+        }
+
     }
 }
 
