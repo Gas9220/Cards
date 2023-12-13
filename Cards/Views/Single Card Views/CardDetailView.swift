@@ -21,32 +21,30 @@ struct CardDetailView: View {
                     .frame(width: element.transform.size.width, height: element.transform.size.height)
             }
         }
-        .dropDestination(for: Data.self) { receivedData, location in
+        .dropDestination(for: UIImage.self) { images, location in
             print(location)
 
-            for data in receivedData {
-                if let image = UIImage(data: data) {
-                    card.addElement(uiImage: image)
-                }
+            for image in images {
+                card.addElement(uiImage: image)
             }
 
-            return !receivedData.isEmpty
+            return !images.isEmpty
         }
 
     }
 }
 
 struct CardDetailView_Previews: PreviewProvider {
-  struct CardDetailPreview: View {
-    @EnvironmentObject var store: CardStore
+    struct CardDetailPreview: View {
+        @EnvironmentObject var store: CardStore
 
-    var body: some View {
-      CardDetailView(card: $store.cards[0])
+        var body: some View {
+            CardDetailView(card: $store.cards[0])
+        }
     }
-  }
 
-  static var previews: some View {
-    CardDetailPreview()
-      .environmentObject(CardStore(defaultData: true))
-  }
+    static var previews: some View {
+        CardDetailPreview()
+            .environmentObject(CardStore(defaultData: true))
+    }
 }
