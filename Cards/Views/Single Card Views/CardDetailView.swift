@@ -21,16 +21,13 @@ struct CardDetailView: View {
                     .frame(width: element.transform.size.width, height: element.transform.size.height)
             }
         }
-        .dropDestination(for: UIImage.self) { images, location in
+        .dropDestination(for: CustomTransfer.self) { items, location in
             print(location)
-
-            for image in images {
-                card.addElement(uiImage: image)
+            Task {
+                card.addElements(from: items)
             }
-
-            return !images.isEmpty
+            return !items.isEmpty
         }
-
     }
 }
 
