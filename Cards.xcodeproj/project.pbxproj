@@ -30,6 +30,7 @@
 		6B3944492B2876170039C01F /* CardElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944482B2876170039C01F /* CardElementView.swift */; };
 		6B39444C2B28A51C0039C01F /* Stickers in Resources */ = {isa = PBXBuildFile; fileRef = 6B39444B2B28A51C0039C01F /* Stickers */; };
 		6B39444F2B28A5C80039C01F /* StickerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39444E2B28A5C80039C01F /* StickerModal.swift */; };
+		6B3944512B29B86B0039C01F /* PhotosModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944502B29B86B0039C01F /* PhotosModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		6B39444A2B28A3230039C01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6B39444B2B28A51C0039C01F /* Stickers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Stickers; path = "../../materials/16-adding-assets-to-your-app/assets/Stickers"; sourceTree = "<group>"; };
 		6B39444E2B28A5C80039C01F /* StickerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerModal.swift; sourceTree = "<group>"; };
+		6B3944502B29B86B0039C01F /* PhotosModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				6B39444E2B28A5C80039C01F /* StickerModal.swift */,
+				6B3944502B29B86B0039C01F /* PhotosModal.swift */,
 			);
 			path = "Card Modal View";
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				6B39444F2B28A5C80039C01F /* StickerModal.swift in Sources */,
 				6B35A2002B2757F000B54698 /* ToolbarSelection.swift in Sources */,
 				6B3944362B2868830039C01F /* Settings.swift in Sources */,
+				6B3944512B29B86B0039C01F /* PhotosModal.swift in Sources */,
 				6B3944472B2875C80039C01F /* CardDetailView.swift in Sources */,
 				6B3944412B2870780039C01F /* Card.swift in Sources */,
 				6B35A2022B27580D00B54698 /* BottomToolbar.swift in Sources */,
