@@ -12,7 +12,7 @@ import SwiftUI
 struct ElementContextMenu: ViewModifier {
     @Binding var card: Card
     @Binding var element: CardElement
-    
+
     func body(content: Content) -> some View {
         content
             .contextMenu {
@@ -25,6 +25,12 @@ struct ElementContextMenu: ViewModifier {
                     }
                 } label: {
                     Label("Copy", systemImage: "doc.on.doc")
+                }
+
+                Button(role: .destructive) {
+                    card.remove(element)
+                } label: {
+                    Label("Delete", systemImage: "trash")
                 }
             }
     }
