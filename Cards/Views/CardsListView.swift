@@ -31,6 +31,13 @@ struct CardsListView: View {
                         .onTapGesture {
                             selectedCard = card
                         }
+                        .contextMenu {
+                            Button(role: .destructive) {
+                                    store.remove(card)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                 }
             }
         }
