@@ -14,8 +14,8 @@ struct Shapes: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    let currentShape = Triangle()
-
+    let currentShape = Cone()
+    
     return currentShape
         .aspectRatio(1, contentMode: .fit)
         .background(Color.yellow)
@@ -32,6 +32,26 @@ struct Triangle: Shape {
             CGPoint(x: width * 0.4, y: height * 0.93)
         ])
         path.closeSubpath()
+        return path
+    }
+}
+
+struct Cone: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        let radius = min(rect.midX, rect.midY)
+        
+        path.addArc(
+            center: CGPoint(x: rect.midX, y: rect.midY),
+            radius: radius,
+            startAngle: Angle(degrees: 0),
+            endAngle: Angle(degrees: 180),
+            clockwise: true)
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.height))
+        path.addLine(to: CGPoint(x: rect.midX + radius, y: rect.midY))
+        path.closeSubpath()
+        
         return path
     }
 }
