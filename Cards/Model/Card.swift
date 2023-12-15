@@ -13,7 +13,8 @@ struct Card: Identifiable {
     var elements: [CardElement] = []
     
     mutating func addElement(uiImage: UIImage) {
-        let element = ImageElement(uiImage: uiImage)
+        let imageFileName = uiImage.save()
+        let element = ImageElement(uiImage: uiImage, imageFilename: imageFileName)
         elements.append(element)
     }
 
@@ -32,6 +33,10 @@ struct Card: Identifiable {
     }
 
     mutating func remove(_ element: CardElement) {
+        if let element = element as? ImageElement {
+            UIImage.remove(name: element.imageFilename)
+        }
+        
         if let index = element.index(in: elements) {
             elements.remove(at: index)
         }
