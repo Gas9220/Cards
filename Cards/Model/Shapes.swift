@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct Shapes: View {
+    static let shapes: [AnyShape] = [
+        AnyShape(Circle()), AnyShape(Rectangle()),
+        AnyShape(Cone()), AnyShape(Lens())
+    ]
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,7 +20,7 @@ struct Shapes: View {
 
 #Preview(traits: .sizeThatFitsLayout) {
     let currentShape = Lens()
-
+    
     return currentShape
         .stroke(
             Color.primary,
@@ -43,9 +48,9 @@ struct Triangle: Shape {
 struct Cone: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-
+        
         let radius = min(rect.midX, rect.midY)
-
+        
         path.addArc(
             center: CGPoint(x: rect.midX, y: rect.midY),
             radius: radius,
@@ -55,7 +60,7 @@ struct Cone: Shape {
         path.addLine(to: CGPoint(x: rect.midX, y: rect.height))
         path.addLine(to: CGPoint(x: rect.midX + radius, y: rect.midY))
         path.closeSubpath()
-
+        
         return path
     }
 }
@@ -63,7 +68,7 @@ struct Cone: Shape {
 struct Lens: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-
+        
         path.move(to: CGPoint(x: 0, y: rect.midY))
         path.addQuadCurve(
             to: CGPoint(x: rect.width, y: rect.midY),
@@ -72,7 +77,7 @@ struct Lens: Shape {
             to: CGPoint(x: 0, y: rect.midY),
             control: CGPoint(x: rect.midX, y: rect.height))
         path.closeSubpath()
-
+        
         return path
     }
 }
