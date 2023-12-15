@@ -17,10 +17,20 @@ struct CardDetailView: View {
 
             ForEach($card.elements, id: \.id) { $element in
                 CardElementView(element: element)
+                    .border(
+                        Settings.borderColor,
+                        width: isSelected(element) ? Settings.borderWidth : 0
+                    )
                     .elementContextMenu(card: $card, element: $element)
                     .resizableView(transform: $element.transform)
                     .frame(width: element.transform.size.width, height: element.transform.size.height)
+                    .onTapGesture {
+                        store.selectedElement = element
+                    }
             }
+        }
+        .onDisappear {
+            store.selectedElement = nil
         }
         .dropDestination(for: CustomTransfer.self) { items, location in
             print(location)
@@ -29,6 +39,10 @@ struct CardDetailView: View {
             }
             return !items.isEmpty
         }
+    }
+
+    func isSelected(_ element: CardElement) -> Bool {
+        store.selectedElement?.id == element.id
     }
 }
 
