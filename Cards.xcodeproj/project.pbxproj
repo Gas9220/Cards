@@ -102,13 +102,13 @@
 		6B35A1EA2B27510300B54698 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				6B35A1EB2B27510300B54698 /* CardsApp.swift */,
 				6B39444A2B28A3230039C01F /* Info.plist */,
-				6B39444B2B28A51C0039C01F /* Stickers */,
-				6B3944372B2869740039C01F /* Extensions */,
-				6B3944342B2868710039C01F /* Config */,
-				6B39442F2B285ABA0039C01F /* Model */,
+				6B35A1EB2B27510300B54698 /* CardsApp.swift */,
 				6B35A2032B275B3300B54698 /* Views */,
+				6B39442F2B285ABA0039C01F /* Model */,
+				6B3944342B2868710039C01F /* Config */,
+				6B3944372B2869740039C01F /* Extensions */,
+				6B39444B2B28A51C0039C01F /* Stickers */,
 				6B35A1EF2B27510500B54698 /* Assets.xcassets */,
 				6B35A1F12B27510500B54698 /* Preview Content */,
 			);
@@ -127,10 +127,10 @@
 		6B35A2032B275B3300B54698 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6B35A2042B275C7000B54698 /* Single Card Views */,
 				6B35A1FB2B27527B00B54698 /* CardThumbnail.swift */,
 				6B35A1F92B27519800B54698 /* CardsListView.swift */,
 				6B39442D2B285A460039C01F /* ResizableView.swift */,
+				6B35A2042B275C7000B54698 /* Single Card Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,7 +138,6 @@
 		6B35A2042B275C7000B54698 /* Single Card Views */ = {
 			isa = PBXGroup;
 			children = (
-				6B39444D2B28A5AB0039C01F /* Card Modal View */,
 				6B39443A2B286CA20039C01F /* CardToolbar.swift */,
 				6B35A1FD2B27529D00B54698 /* SingleCardView.swift */,
 				6B35A1FF2B2757F000B54698 /* ToolbarSelection.swift */,
@@ -146,6 +145,7 @@
 				6B3944462B2875C80039C01F /* CardDetailView.swift */,
 				6B3944482B2876170039C01F /* CardElementView.swift */,
 				6B3944562B29C9D80039C01F /* ElementContextMenu.swift */,
+				6B39444D2B28A5AB0039C01F /* Card Modal View */,
 			);
 			path = "Single Card Views";
 			sourceTree = "<group>";
