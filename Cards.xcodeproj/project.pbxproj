@@ -36,6 +36,7 @@
 		6B3944572B29C9D80039C01F /* ElementContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3944562B29C9D80039C01F /* ElementContextMenu.swift */; };
 		6B6EF0862B2C451A00C838CD /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EF0852B2C451A00C838CD /* Shapes.swift */; };
 		6B6EF0882B2C4EDF00C838CD /* FrameModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EF0872B2C4EDF00C838CD /* FrameModal.swift */; };
+		6B6EF08C2B2C847200C838CD /* AngleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EF08B2B2C847200C838CD /* AngleExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		6B3944562B29C9D80039C01F /* ElementContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementContextMenu.swift; sourceTree = "<group>"; };
 		6B6EF0852B2C451A00C838CD /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		6B6EF0872B2C4EDF00C838CD /* FrameModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameModal.swift; sourceTree = "<group>"; };
+		6B6EF08B2B2C847200C838CD /* AngleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				6B3944382B2869880039C01F /* ColorExtensions.swift */,
 				6B39443C2B286F4C0039C01F /* TextExtensions.swift */,
 				6B3944522B29C00F0039C01F /* UIImageExtensions.swift */,
+				6B6EF08B2B2C847200C838CD /* AngleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				6B3944312B285ADA0039C01F /* Transform.swift in Sources */,
 				6B39442E2B285A460039C01F /* ResizableView.swift in Sources */,
 				6B3944332B285C690039C01F /* Operators.swift in Sources */,
+				6B6EF08C2B2C847200C838CD /* AngleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
