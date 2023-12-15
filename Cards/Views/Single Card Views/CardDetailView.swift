@@ -60,3 +60,19 @@ struct CardDetailView_Previews: PreviewProvider {
             .environmentObject(CardStore(defaultData: true))
     }
 }
+
+
+//private extension View {
+//    @ViewBuilder
+//    func overlay(element: CardElement, isSelected: Bool) -> some View {
+//        if isSelected &&  {
+//            self
+//                .border(
+//                    Settings.borderColor,
+//                    width: Settings.borderWidth
+//                )
+//        } else {
+//            self
+//        }
+//    }
+//}
