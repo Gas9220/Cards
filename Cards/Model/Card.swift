@@ -45,4 +45,8 @@ struct Card: Identifiable {
             elements[index] = newElement
         }
     }
+
+    func save() {
+        print("Saving data")
+    }
 }
