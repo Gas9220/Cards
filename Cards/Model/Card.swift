@@ -81,13 +81,22 @@ extension Card: Codable {
 
         let id = try container.decode(String.self, forKey: .id)
         self.id = UUID(uuidString: id) ?? UUID()
+
         elements += try container.decode([ImageElement].self, forKey: .imageElements)
+
+        let colorComponents = try container.decode([CGFloat].self, forKey: .backgroundColor)
+        self.backgroundColor = Color.color(components: colorComponents)
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
+
         try container.encode(id.uuidString, forKey: .id)
+
         let imageElements: [ImageElement] = elements.compactMap { $0 as? ImageElement }
         try container.encode(imageElements, forKey: .imageElements)
+
+        let color = backgroundColor.colorComponents()
+        try container.encode(color, forKey: .backgroundColor)
     }
 }
