@@ -24,6 +24,13 @@ class CardStore: ObservableObject {
             cards.remove(at: index)
         }
     }
+
+    func addCard() -> Card {
+        let card = Card(backgroundColor: Color.random())
+        cards.append(card)
+        card.save()
+        return card
+    }
 }
 
 extension CardStore {
