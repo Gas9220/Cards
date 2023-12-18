@@ -116,3 +116,14 @@ extension UIImage {
         }
     }
 }
+
+extension UIImage {
+    @MainActor static func screenshot(card: Card, size: CGSize) -> UIImage {
+        let cardView = ShareCardView(card: card)
+        let content = cardView.content(size: size)
+        let renderer = ImageRenderer(content: content)
+        let uiImage = renderer.uiImage ?? UIImage.errorImage
+
+        return uiImage
+    }
+}
