@@ -11,8 +11,25 @@ struct CardsListView: View {
     @EnvironmentObject var store: CardStore
 
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
 
     @State private var selectedCard: Card?
+
+    var columns: [GridItem] {
+        [
+            GridItem(.adaptive(minimum: thumbnailSize.width))
+        ]
+    }
+
+    var thumbnailSize: CGSize {
+        var scale: CGFloat = 1
+        if verticalSizeClass == .regular,
+           horizontalSizeClass == .regular {
+            scale = 1.5
+        }
+        return Settings.thumbnailSize * scale
+    }
 
     var body: some View {
         VStack {
@@ -28,25 +45,27 @@ struct CardsListView: View {
                     } else {
                         fatalError("Unable to locate selected card")
                     }
-            }
+                }
 
             Button("Add") {
                 selectedCard = store.addCard()
             }
         }
+        .background(Color("background").ignoresSafeArea())
     }
 
     var list: some View {
         ScrollView(showsIndicators: false) {
-            VStack {
+            LazyVGrid(columns: columns, spacing: 30) {
                 ForEach(store.cards) { card in
                     CardThumbnail(card: card)
+                        .frame(width: thumbnailSize.width, height: thumbnailSize.height)
                         .onTapGesture {
                             selectedCard = card
                         }
                         .contextMenu {
                             Button(role: .destructive) {
-                                    store.remove(card)
+                                store.remove(card)
                             } label: {
                                 Label("Delete", systemImage: "trash")
                             }
@@ -54,6 +73,7 @@ struct CardsListView: View {
                 }
             }
         }
+        .padding(.top, 20)
     }
 }
 
