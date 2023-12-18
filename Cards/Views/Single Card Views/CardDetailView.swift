@@ -12,6 +12,7 @@ struct CardDetailView: View {
     @Binding var card: Card
 
     var viewScale: CGFloat = 1
+    var proxy: GeometryProxy?
 
     var body: some View {
         ZStack {
@@ -34,9 +35,10 @@ struct CardDetailView: View {
             store.selectedElement = nil
         }
         .dropDestination(for: CustomTransfer.self) { items, location in
-            print(location)
+            let offset = Settings.calculateDropOffset(proxy: proxy, location: location)
+
             Task {
-                card.addElements(from: items)
+                card.addElements(from: items, at: offset)
             }
             return !items.isEmpty
         }
