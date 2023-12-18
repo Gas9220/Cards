@@ -47,9 +47,7 @@ struct CardsListView: View {
                     }
                 }
 
-            Button("Add") {
-                selectedCard = store.addCard()
-            }
+            createButton
         }
         .background(Color("background").ignoresSafeArea())
     }
@@ -74,6 +72,18 @@ struct CardsListView: View {
             }
         }
         .padding(.top, 20)
+    }
+
+    var createButton: some View {
+        Button {
+            selectedCard = store.addCard()
+        } label: {
+            Label("Create new", systemImage: "plus")
+                .frame(maxWidth: .infinity)
+        }
+        .font(.system(size: 16, weight: .bold))
+        .padding([.top, .bottom], 10)
+        .background(Color("barColor"))
     }
 }
 
