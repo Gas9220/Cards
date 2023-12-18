@@ -43,6 +43,8 @@
 		6BE54CA12B307C4E00B34940 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE54C9D2B307C4E00B34940 /* TextView.swift */; };
 		6BE54CA22B307C4E00B34940 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE54C9E2B307C4E00B34940 /* AppFonts.swift */; };
 		6BE54CA32B307C4E00B34940 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE54C9F2B307C4E00B34940 /* ShareCardView.swift */; };
+		6BE54CA52B307CD500B34940 /* AppLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE54CA42B307CD500B34940 /* AppLoadingView.swift */; };
+		6BE54CA72B307CDF00B34940 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE54CA62B307CDF00B34940 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		6BE54C9D2B307C4E00B34940 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		6BE54C9E2B307C4E00B34940 /* AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		6BE54C9F2B307C4E00B34940 /* ShareCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
+		6BE54CA42B307CD500B34940 /* AppLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingView.swift; sourceTree = "<group>"; };
+		6BE54CA62B307CDF00B34940 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			children = (
 				6B39444A2B28A3230039C01F /* Info.plist */,
 				6B35A1EB2B27510300B54698 /* CardsApp.swift */,
+				6BE54CA42B307CD500B34940 /* AppLoadingView.swift */,
+				6BE54CA62B307CDF00B34940 /* SplashScreen.swift */,
 				6B35A2032B275B3300B54698 /* Views */,
 				6B39442F2B285ABA0039C01F /* Model */,
 				6B3944342B2868710039C01F /* Config */,
@@ -315,12 +321,14 @@
 				6B3944572B29C9D80039C01F /* ElementContextMenu.swift in Sources */,
 				6BE54CA22B307C4E00B34940 /* AppFonts.swift in Sources */,
 				6B35A2022B27580D00B54698 /* BottomToolbar.swift in Sources */,
+				6BE54CA52B307CD500B34940 /* AppLoadingView.swift in Sources */,
 				6B6EF0862B2C451A00C838CD /* Shapes.swift in Sources */,
 				6B35A1EC2B27510300B54698 /* CardsApp.swift in Sources */,
 				6B39443D2B286F4C0039C01F /* TextExtensions.swift in Sources */,
 				6B3944492B2876170039C01F /* CardElementView.swift in Sources */,
 				6B39443F2B28705E0039C01F /* CardElement.swift in Sources */,
 				6B3944312B285ADA0039C01F /* Transform.swift in Sources */,
+				6BE54CA72B307CDF00B34940 /* SplashScreen.swift in Sources */,
 				6B37BAEE2B2DAE4800335930 /* TextModal.swift in Sources */,
 				6B39442E2B285A460039C01F /* ResizableView.swift in Sources */,
 				6B3944332B285C690039C01F /* Operators.swift in Sources */,
