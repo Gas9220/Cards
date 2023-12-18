@@ -15,15 +15,22 @@ struct SingleCardView: View {
 
     var body: some View {
         NavigationStack {
-            CardDetailView(card: $card)
-                .modifier(CardToolbar(currentModal: $currentModal, card: $card))
-                .onDisappear {
-                    card.save()
+            GeometryReader { proxy in
+                CardDetailView(card: $card, viewScale: Settings.calculateScale(proxy.size))
+                    .modifier(CardToolbar(currentModal: $currentModal, card: $card))
+                    .frame(width: Settings.calculateSize(proxy.size).width,
+                           height: Settings.calculateSize(proxy.size).height)
+                    .clipped()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .onDisappear {
+                        card.save()
                 }
+            }
         }
     }
 }
 
 #Preview {
     SingleCardView(card: .constant(initialCards[0]))
+        .environmentObject(CardStore())
 }

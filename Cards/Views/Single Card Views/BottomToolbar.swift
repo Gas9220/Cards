@@ -14,7 +14,7 @@ struct BottomToolbar: View {
     @Binding var card: Card
     
     var body: some View {
-        HStack {
+        HStack(alignment: .bottom) {
             ForEach(ToolbarSelection.allCases) { selection in
                 switch selection {
                 case .photoModal:
