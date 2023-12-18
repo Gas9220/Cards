@@ -9,10 +9,13 @@ import SwiftUI
 
 struct CardThumbnail: View {
     let card: Card
-
+    
     var body: some View {
-        RoundedRectangle(cornerRadius: 15)
-            .foregroundStyle(card.backgroundColor)
+        card.backgroundColor
+            .clipShape(
+                RoundedRectangle(cornerRadius: 10)
+            )
+            .shadow(color: Color("shadow-color"), radius: 3, x: 0, y: 0)
     }
 }
 
