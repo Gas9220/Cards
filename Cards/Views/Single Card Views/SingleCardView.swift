@@ -23,6 +23,9 @@ struct SingleCardView: View {
                     .clipped()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onDisappear {
+                        let uiImage = UIImage.screenshot(card: card, size: Settings.cardSize * 0.2)
+                        _ = uiImage.save(to: card.id.uuidString)
+                        card.uiImage = uiImage
                         card.save()
                 }
             }
