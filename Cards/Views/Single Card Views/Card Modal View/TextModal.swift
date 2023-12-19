@@ -14,10 +14,14 @@ struct TextModal: View {
 
     var body: some View {
         TextField("Enter text", text: $textElement.text)
+            .font(.custom(textElement.textFont, size: 30))
+            .foregroundStyle(textElement.textColor)
             .onSubmit {
                 dismiss()
             }
             .padding(20)
+
+        TextView(font: $textElement.textFont, color: $textElement.textColor)
     }
 }
 
